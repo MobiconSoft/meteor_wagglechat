@@ -1,13 +1,13 @@
 Template.createRoom.events({
-  "click button[name=saveRoom]": function(evt, tmpl) {
+    "click button[name=saveRoom]": function(evt, tmpl) {
 
-    Rooms.insert( {
-      _id: tmpl.find("input[name=roomId]").value
-      ,name: tmpl.find("input[name=roomId]").value
-      ,owner: Meteor.userId()
-      ,userList: [Meteor.userId()]
-    });
+        Rooms.insert({
+            _id: tmpl.find("input[name=roomId]").value,
+            name: tmpl.find("input[name=roomId]").value,
+            owner: Meteor.userId(),
+            userList: [Meteor.userId()]
+        });
 
-    tmpl.find("input[name=roomId]").value = "";
-  }
+        tmpl.find("input[name=roomId]").value = "";
+    }
 })
