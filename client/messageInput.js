@@ -15,9 +15,13 @@ Template.messageInput.events({
             email: Meteor.user().emails[0].address
         };
 
-        Messages.insert(messageObj);
+        // Messages.insert(messageObj);
+        //if(Meteor.isServer()){
+            Meteor.call('sendMessage', messageObj);
+        //}
+        console.dir(messageObj);
 
         txtBox.value = '';
         txtBox.focus();
     }
-})
+});

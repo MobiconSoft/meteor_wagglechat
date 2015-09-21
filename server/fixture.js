@@ -22,4 +22,4 @@ Meteor.startup(function() {
       createdAt: (new Date()).getTime()
     });
   }
-})
+});
