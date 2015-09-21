@@ -8,3 +8,5 @@ meteor-platform
 twbs:bootstrap
 accounts-ui
 accounts-password
+jparker:gravatar
+momentjs:moment

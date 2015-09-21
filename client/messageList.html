@@ -2,7 +2,8 @@
     <div class="panel-body">
         <ul class="chat">
             {{#each messages}}
-                <li>{{username}}: {{msg}}</li>
+                <!-- <li>{{username}}: {{msg}}</li> -->
+                {{> message}}
             {{/each}}
         </ul>
     </div>
